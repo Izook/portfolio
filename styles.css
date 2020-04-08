@@ -1,5 +1,6 @@
 body {
   font-family: "Hammersmith One", sans-serif;
+  color: #fff;
   margin: 0;
   background-color: #054e5c;
   height: 100%;
@@ -8,7 +9,6 @@ body {
 
 .header {
   background-color: #005d38;
-  color: #fff;
   height: 100px;
   font-size: 48px;
   display: flex;
@@ -23,8 +23,6 @@ body {
   padding-top: 25px;
   padding-bottom: 100px;
   font-size: 24px;
-  color: #bbb;
-
   display: flex;
   flex-direction: column;
   align-items: center;
