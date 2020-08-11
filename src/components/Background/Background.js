@@ -16,9 +16,6 @@ const Background = () => {
         backgroundColor: "#030633",
       })
       .add({
-        backgroundColor: "#330332",
-      })
-      .add({
         backgroundColor: "#180033",
       });
   }, []);
