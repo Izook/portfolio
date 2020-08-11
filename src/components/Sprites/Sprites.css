@@ -1,0 +1,9 @@
+.sprite {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: #fff;
+  z-index: 10;
+  opacity: 0;
+}

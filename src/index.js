@@ -7,9 +7,11 @@ import "./index.css";
 
 import App from "./components/App/App";
 import Background from "./components/Background/Background";
+import Sprites from "./components/Sprites/Sprites";
 
 ReactDOM.render(
   <React.StrictMode>
+    <Sprites />
     <Background />
     <App />
   </React.StrictMode>,
