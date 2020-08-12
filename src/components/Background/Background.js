@@ -5,6 +5,9 @@ import "./Background.css";
 
 const Background = () => {
   React.useEffect(() => {
+    const initialDuration = Math.random() * 3000 + 3000;
+    const gradientDuration = Math.random() * 3000 + 3000;
+
     anime
       .timeline({
         targets: ".background",
@@ -13,10 +16,12 @@ const Background = () => {
         loop: true,
       })
       .add({
-        backgroundColor: "#030633",
+        backgroundColor: "#04002E",
+        duration: initialDuration,
       })
       .add({
-        backgroundColor: "#180033",
+        backgroundColor: "#000B2E",
+        duration: gradientDuration,
       });
   }, []);
 
