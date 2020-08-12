@@ -4,25 +4,14 @@ import Sprite from "./Sprite";
 
 import "./Sprites.css";
 
+const spriteCount = 20;
+
 const Sprites = () => {
   return (
     <div className="sprites">
-      <Sprite />
-      <Sprite />
-      <Sprite />
-      <Sprite />
-      <Sprite />
-      <Sprite />
-      <Sprite />
-      <Sprite />
-      <Sprite />
-      <Sprite />
-      <Sprite />
-      <Sprite />
-      <Sprite />
-      <Sprite />
-      <Sprite />
-      <Sprite />
+      {[...Array(spriteCount)].map((e, i) => (
+        <Sprite />
+      ))}
     </div>
   );
 };
