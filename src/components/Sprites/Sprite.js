@@ -1,6 +1,5 @@
 import React from "react";
 import anime from "animejs";
-import uniqid from "uniqid";
 
 const spriteColors = [
   "#3BA363",
@@ -20,8 +19,8 @@ const getRandomBezierValue = () => {
   return randomValue.slice(1, 4);
 };
 
-const Sprite = () => {
-  const spriteID = uniqid();
+const Sprite = ({ id }) => {
+  const spriteID = id;
 
   React.useEffect(() => {
     const randomMovement = () => {
