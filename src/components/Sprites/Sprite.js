@@ -14,11 +14,18 @@ const randomColor = () => {
   return spriteColors[Math.floor(Math.random() * spriteColors.length)];
 };
 
+const getRandomBezierValue = () => {
+  let randomValue = Math.random() * 1.5 - 0.75;
+  randomValue = randomValue.toString();
+  return randomValue.slice(1, 4);
+};
+
 const Sprite = () => {
   const spriteID = uniqid();
 
   React.useEffect(() => {
     const randomMovement = () => {
+      const randomDelay = Math.random() * 2000;
       const randomDuration = (Math.random() * 4 + 4) * 1000;
       const randomInitialScale = Math.random() * 1.5 + 0.75;
       const randomFinalScale = Math.random() * 1.5 + 0.75;
@@ -37,6 +44,7 @@ const Sprite = () => {
         .timeline({
           targets: `#sprite-${spriteID}`,
           easing: "linear",
+          delay: randomDelay,
           duration: randomDuration,
           complete: () => {
             randomMovement();
@@ -56,23 +64,11 @@ const Sprite = () => {
             scaleY: randomFinalScale,
             translateX: {
               value: anime.random(0, window.outerWidth),
-              easing: () => {
-                const amplitude = Math.random() * 1.5;
-                const period = Math.random() * 1.5;
-                return (time) => {
-                  return amplitude * Math.sin(period * time);
-                };
-              },
+              easing: `cubicBezier(${getRandomBezierValue()}, ${getRandomBezierValue()}, ${getRandomBezierValue()}, ${getRandomBezierValue()})`,
             },
             translateY: {
               value: anime.random(0, window.outerHeight),
-              easing: () => {
-                const amplitude = Math.random() * 1.5;
-                const period = Math.random() * 1.5;
-                return (time) => {
-                  return amplitude * Math.cos(period * time);
-                };
-              },
+              easing: `cubicBezier(${getRandomBezierValue()}, ${getRandomBezierValue()}, ${getRandomBezierValue()}, ${getRandomBezierValue()})`,
             },
           },
           0
@@ -86,7 +82,7 @@ const Sprite = () => {
         );
     };
     randomMovement();
-  }, []);
+  }, [spriteID]);
 
   return <div className="sprite" id={`sprite-${spriteID}`}></div>;
 };
