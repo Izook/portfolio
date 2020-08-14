@@ -25,20 +25,19 @@ const Sprite = ({ id }) => {
   React.useEffect(() => {
     const randomMovement = () => {
       const randomDelay = Math.random() * 2000;
-      const randomDuration = (Math.random() * 4 + 4) * 1000;
+      const randomDuration = (Math.random() * 4 + 5) * 1000;
       const randomInitialScale = Math.random() * 1.5 + 0.75;
       const randomFinalScale = Math.random() * 1.5 + 0.75;
 
-      // Position Randomly in Window
       anime.set(`#sprite-${spriteID}`, {
         backgroundColor: randomColor(),
         translateX: anime.random(0, window.outerWidth),
         translateY: anime.random(0, window.outerHeight),
         scaleX: randomInitialScale,
         scaleY: randomInitialScale,
+        opacity: 0,
       });
 
-      // Curve in Random Direction
       anime
         .timeline({
           targets: `#sprite-${spriteID}`,
