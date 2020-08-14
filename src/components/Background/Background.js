@@ -25,7 +25,7 @@ const Background = () => {
       });
   }, []);
 
-  return <div className="background"></div>;
+  return <div className="Background"></div>;
 };
 
 export default Background;

@@ -9,12 +9,11 @@ const spriteCount = 20;
 
 const Sprites = () => {
   return (
-    <div className="sprites">
+    <div className="Sprites">
       {[...Array(spriteCount)].map((e, i) => {
         const spriteID = uniqid();
         return <Sprite id={spriteID} key={spriteID} />;
       })}
-      id=
     </div>
   );
 };

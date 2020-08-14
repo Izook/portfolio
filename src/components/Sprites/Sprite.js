@@ -82,7 +82,7 @@ const Sprite = ({ id }) => {
     randomMovement();
   }, [spriteID]);
 
-  return <div className="sprite" id={`sprite-${spriteID}`}></div>;
+  return <div className="Sprite" id={`sprite-${spriteID}`}></div>;
 };
 
 export default Sprite;

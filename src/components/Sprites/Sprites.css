@@ -1,4 +1,8 @@
-.sprite {
+.Sprites {
+  z-index: -1;
+}
+
+.Sprite {
   position: fixed;
   width: 20px;
   height: 20px;
