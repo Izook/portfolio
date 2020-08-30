@@ -1,88 +1,53 @@
 <!DOCTYPE html>
+<html width="100%" height="100%">
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <head>
-      <title>Izook</title>
-      <meta
-        name="description"
-        content="The portfolio of Isaac Ortega, AKA Izook."
-      />
-      <meta name="author" content="Izook" />
-      <meta
-        name="keywords"
-        content="web developer, math, undergraduate, Seattle University"
-      />
-      <meta content="width=device-width, initial-scale=1" name="viewport" />
+<head>
+  <meta charset="utf-8">
 
-      <link rel="icon" href="images/tile.png" />
-      <link rel="stylesheet" href="styles.css" />
+  <title>Izook</title>
 
-      <!-- Google Fonts [Hammersmith One 400]-->
-      <link
-        href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap"
-        rel="stylesheet"
-      />
+  <!-- JQuery Library -->
+  <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+  <!-- Paper.js Library -->
+  <script type="text/javascript" src="node_modules/paper/dist/paper-full.min.js"></script>
 
-      <!-- Google AdSense Tag-->
-      <script
-        data-ad-client="ca-pub-5663772549872809"
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-      ></script>
-    </head>
-  </head>
+  <!-- Background Paper Script -->
+  <script type="text/paperscript" src="Javascript/background.js" canvas="page-background"></script>
+  <!-- Page Javascript -->
+  <script type="text/javascript" src="Javascript/script.js"></script>
 
-  <body>
-    <div class="header">
-      <div class="title">
-        Izook
-      </div>
+  <!-- Page Sytlesheets -->
+  <link rel="stylesheet" href="Styles/CSS/styles.css">
+  <link rel="stylesheet" href="Styles/CSS/animations.css">
+
+  <!-- Arhivo Narrow Font -->
+  <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Paper JS Background Canvas -->
+    <canvas id="page-background" resize="true"></canvas>
+
+    <!-- Page Title-->
+    <div class="page-title">
+      <h1><span class="console">> </span>Isaac Ortega<span class="cursor console"> _</span></h1>
+      </br></br>
+      <p class="subtitle">I'm just a kid who likes programmming and math.</p>
     </div>
 
-    <div class="content">
-      <div class="contentImage profilePic">
-        <img src="images/me.jpg" />
-      </div>
-
-      <div class="copy">
-        <p>Howdy!</p>
-        <p>
-          You've hit my portfolio! I don't really have a lot of content here yet
-          but soon its going to be chock full of cool projects I've been working
-          on! I would really love it if you would checkout this game
-          <a href="//izook.github.io/knotris/">Knotris</a> that I've been
-          working on for undergraduate research! Click the tile below to play!
-        </p>
-      </div>
-
-      <div class="contentImage knotris">
-        <a href="//izook.github.io/knotris/">
-          <img src="images/tile.png" />
-        </a>
-      </div>
-
-      <div class="copy">
-        <p>
-          If you really want to learn more about me though, check out my
-          <a href="https://www.linkedin.com/in/isaac-ortega/">LinkedIn</a>,
-          <a href="https://github.com/Izook">GitHub</a>, or email me at
-          <a href="mailto:isaac.io.ortega@gmail.com"
-            >isaac.io.ortega@gmail.com</a
-          >.
-        </p>
-      </div>
+  <!-- Page Footer-->
+  <footer>
+    <div class="contact-me">
+      <div class="name"><span>Isaac Ortega</span></div>
+      <div class="email"><span>Isaac.IO.Ortega@Gmail.com</span></div>
+      <div class="number"><span>(858)774-6244</span></div>
+    </div>
+    <div class="contact-buttons">
+      <a class="linkedin"></a>
+      <a class="github"></a>
     </div>
 
-    <div class="footer">
-      <a href="https://www.linkedin.com/in/isaac-ortega/">
-        <img src="images/linkedin.png" />
-      </a>
+  </footer>
+</body>
 
-      <a href="https://github.com/Izook">
-        <img src="images/github.png" />
-      </a>
-    </div>
-  </body>
 </html>
