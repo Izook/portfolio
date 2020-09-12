@@ -11,7 +11,7 @@ const ModalContainer = ({children}) => {
         opacity: 1,
         translateY: [-20, 0],
         duration: 2500,
-        delay: anime.stagger(500),
+        delay: anime.stagger(1500),
       })
   }, []);
 
