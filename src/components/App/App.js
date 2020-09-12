@@ -7,7 +7,7 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <Modal></Modal>
+      <Modal isGhost='true'></Modal>
     </div>
   );
 }
