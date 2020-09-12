@@ -1,18 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700;800&display=swap");
 
-html,
-body {
+html,body, #root {
   margin: 0;
   width: 100%;
   height: 100%;
-  position: fixed;
+}
+
+html,
+body {
   font-family: "Eczar", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
     "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#root {
-  width: 100%;
-  height: 100%;
-}
