@@ -3,7 +3,7 @@ import anime from "animejs";
 
 import "./Modal.css";
 
-const Modal = ({isGhost, isBackless}) => {
+const Modal = ({isGhost, isBackless, children}) => {
 
   useEffect(() => {
     if(isGhost){
@@ -22,7 +22,7 @@ const Modal = ({isGhost, isBackless}) => {
 
   return (
     <div className={`Modal ${isGhostClass} ${isBacklessClass}`}>
-      <p>Hello! My name is Isaac Ortega!</p>
+      {children}
     </div>
   );
 }

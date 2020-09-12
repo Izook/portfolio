@@ -7,8 +7,12 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <Modal isGhost='true'></Modal>
-      <Modal isGhost='true' isBackless='true'></Modal>
+      <Modal isGhost='true'>
+        <p>Hello! My name is Isaac Ortega!</p>
+      </Modal>
+      <Modal isGhost='true' isBackless='true'>
+        <p>This is my portfolio!</p>
+      </Modal>
     </div>
   );
 }
