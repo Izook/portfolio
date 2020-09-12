@@ -8,6 +8,7 @@ function App() {
   return (
     <div className="App">
       <Modal isGhost='true'></Modal>
+      <Modal isGhost='true' isBackless='true'></Modal>
     </div>
   );
 }
