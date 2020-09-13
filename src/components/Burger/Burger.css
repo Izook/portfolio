@@ -17,14 +17,14 @@
   transition: transform 0.5s;
 }
 
-.Burger.Opened > .Top {
+.Burger.Open > .Top {
   transform: rotate(45deg) translateX(8px) translateY(8px);
 }
 
-.Burger.Opened > .Bottom {
+.Burger.Open > .Bottom {
   transform: rotate(-45deg) translateX(7px) translateY(-7px);
 }
 
-.Burger.Opened > .Middle {
+.Burger.Open > .Middle {
   transform: scaleX(0) scaleY(0) translateX(-200%);
 }

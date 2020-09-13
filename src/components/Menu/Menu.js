@@ -12,7 +12,7 @@ const randomColor = () => {
   return menuColors[Math.floor(Math.random() * menuColors.length)];
 };
 
-const Menu = () => {
+const Menu = ({ isMenuOpen }) => {
   useEffect(() => {
     const rotateColors = () => {
       anime({
@@ -27,7 +27,7 @@ const Menu = () => {
   }, []);
 
   return (
-    <div className="Menu">
+    <div className={`Menu ${isMenuOpen ? "Open" : ""}`}>
       <div className="MenuBackground"></div>
       <img src={profilePic} alt="Isaac drinking coffee" />
       <MenuButton>About Me</MenuButton>

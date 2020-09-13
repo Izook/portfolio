@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Modal from "../Modals/Modal";
 import Menu from "../Menu/Menu";
@@ -8,10 +8,17 @@ import "./App.css";
 import ModalContainer from "../Modals/ModalContainer";
 
 function App() {
+  const [isMenuOpen, toggleMenuOpen] = useState(false);
+
   return (
     <div className="App">
-      <Burger />
-      <Menu />
+      <Burger
+        isMenuOpen={isMenuOpen}
+        onClick={() => {
+          toggleMenuOpen(!isMenuOpen);
+        }}
+      />
+      <Menu isMenuOpen={isMenuOpen} />
       <ModalContainer>
         <Modal isGhost="true">
           <p>Hello! My name is Isaac Ortega!</p>{" "}

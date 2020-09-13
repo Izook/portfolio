@@ -1,17 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import "./Burger.css";
 
-const Burger = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
+const Burger = ({ isMenuOpen, onClick }) => {
   return (
-    <div
-      className={`Burger ${isOpen ? "Opened" : ""}`}
-      onClick={() => {
-        setIsOpen(!isOpen);
-      }}
-    >
+    <div className={`Burger ${isMenuOpen ? "Open" : ""}`} onClick={onClick}>
       <div className="Top"></div>
       <div className="Middle"></div>
       <div className="Bottom"></div>

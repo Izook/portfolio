@@ -10,6 +10,12 @@
   align-items: center;
   padding: 20px;
   z-index: 10;
+  transition: transform 1s;
+  transform: translateX(-100%);
+}
+
+.Menu.Open {
+  transform: translateX(0%);
 }
 
 .MenuBackground {
