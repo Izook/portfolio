@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import anime from "animejs";
+import React from "react";
 
 import "./Modal.css";
 
