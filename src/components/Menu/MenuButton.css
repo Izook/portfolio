@@ -1,0 +1,57 @@
+.MenuButton {
+  cursor: pointer;
+  font-weight: 500;
+  color: #fff;
+  font-size: 36px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.MenuButton.ContactMe {
+  justify-self: flex-end;
+}
+
+.MenuButton > button {
+  cursor: pointer;
+  font-size: 100%;
+  font-family: inherit;
+  border: 0;
+  padding: 0;
+  text-transform: none;
+  overflow: visible;
+  background: none;
+  color: inherit;
+  appearance: none;
+  outline: none;
+  border: none;
+  margin: 0 20px;
+}
+
+.MenuButton > .Square {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  animation: 2s linear rotate;
+  animation-iteration-count: infinite;
+  display: none;
+}
+
+.MenuButton:hover > button {
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.MenuButton:hover > .Square {
+  display: block;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}

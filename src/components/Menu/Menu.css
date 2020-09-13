@@ -1,0 +1,23 @@
+.Menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25%;
+  height: calc(100% - 40px);
+  background: rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+}
+
+.Menu > * {
+  margin: 10px 0px;
+}
+
+.Menu > img {
+  width: 80%;
+  height: auto;
+  clip-path: circle(45% at center);
+}
