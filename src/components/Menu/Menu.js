@@ -33,6 +33,7 @@ const Menu = () => {
       <MenuButton>About Me</MenuButton>
       <MenuButton>Projects</MenuButton>
       <MenuButton>Resume</MenuButton>
+      <MenuButton isChallenge="true">Challenge</MenuButton>
       <MenuButton className="ContactMe">Contact Me</MenuButton>
     </div>
   );
