@@ -2,6 +2,7 @@ import React from "react";
 
 import Modal from "../Modals/Modal";
 import Menu from "../Menu/Menu";
+import Burger from "../Burger/Burger";
 
 import "./App.css";
 import ModalContainer from "../Modals/ModalContainer";
@@ -9,6 +10,7 @@ import ModalContainer from "../Modals/ModalContainer";
 function App() {
   return (
     <div className="App">
+      <Burger />
       <Menu />
       <ModalContainer>
         <Modal isGhost="true">
