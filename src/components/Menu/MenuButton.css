@@ -1,4 +1,5 @@
 .MenuButton {
+  opacity: 0;
   cursor: pointer;
   font-weight: 500;
   color: #fff;

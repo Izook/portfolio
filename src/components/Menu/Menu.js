@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import anime from "animejs";
 
 import MenuButton from "./MenuButton";
@@ -25,6 +25,20 @@ const Menu = ({ isMenuOpen }) => {
     };
     rotateColors();
   }, []);
+
+  const [hasOpened, setHasOpened] = useState(false);
+  useEffect(() => {
+    if (!hasOpened && isMenuOpen) {
+      anime({
+        targets: ".Menu .MenuButton",
+        opacity: 1,
+        translateY: [-20, 0],
+        duration: 800,
+        delay: anime.stagger(500, { start: 1000 }),
+      });
+      setHasOpened(true);
+    }
+  }, [isMenuOpen, hasOpened]);
 
   return (
     <div className={`Menu ${isMenuOpen ? "Open" : ""}`}>
