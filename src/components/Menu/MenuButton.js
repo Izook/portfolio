@@ -1,8 +1,7 @@
 import React from "react";
 
 import "./MenuButton.css";
-
-const skull = require("../../assets/skull.svg");
+import skull from "../../assets/skull.svg";
 
 const MenuButton = ({ children, className, isChallenge }) => {
   const isChallengeClass = isChallenge ? "Challenge" : "";
