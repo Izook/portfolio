@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Modal from "../Modals/Modal";
 import Menu from "../Menu/Menu";
 import Burger from "../Burger/Burger";
+import ContactIcons from "../ContactIcons/ContactIcons";
 
 import "./App.css";
 import ModalContainer from "../Modals/ModalContainer";
@@ -19,6 +20,7 @@ function App() {
         }}
       />
       <Menu isMenuOpen={isMenuOpen} />
+      <ContactIcons />
       <ModalContainer>
         <Modal isGhost="true">
           <p>Hello! My name is Isaac Ortega!</p>{" "}
