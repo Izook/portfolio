@@ -31,8 +31,8 @@ const Sprite = ({ id }) => {
 
       anime.set(`#sprite-${spriteID}`, {
         backgroundColor: randomColor(),
-        translateX: anime.random(0, window.outerWidth),
-        translateY: anime.random(0, window.outerHeight),
+        translateX: anime.random(0, window.innerWidth),
+        translateY: anime.random(0, window.innerHeight),
         scaleX: randomInitialScale,
         scaleY: randomInitialScale,
         opacity: 0,
@@ -61,11 +61,11 @@ const Sprite = ({ id }) => {
             scaleX: randomFinalScale,
             scaleY: randomFinalScale,
             translateX: {
-              value: anime.random(0, window.outerWidth),
+              value: anime.random(0, window.innerWidth),
               easing: `cubicBezier(${getRandomBezierValue()}, ${getRandomBezierValue()}, ${getRandomBezierValue()}, ${getRandomBezierValue()})`,
             },
             translateY: {
-              value: anime.random(0, window.outerHeight),
+              value: anime.random(0, window.innerHeight),
               easing: `cubicBezier(${getRandomBezierValue()}, ${getRandomBezierValue()}, ${getRandomBezierValue()}, ${getRandomBezierValue()})`,
             },
           },
