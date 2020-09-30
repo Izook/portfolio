@@ -1,12 +1,12 @@
 import React from "react";
 
-import "./About.css";
-
 import PageBaseComponent from "../../components/PageBaseComponent/PageBaseComponent";
 import ModalContainer from "../../components/Modals/ModalContainer";
 import Modal from "../../components/Modals/Modal";
 
-function About() {
+import "./About.css";
+
+const About = () => {
   return (
     <PageBaseComponent className="About">
       <ModalContainer>
@@ -25,6 +25,6 @@ function About() {
       </ModalContainer>
     </PageBaseComponent>
   );
-}
+};
 
 export default About;

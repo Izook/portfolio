@@ -12,7 +12,7 @@ const randomColor = () => {
   return menuColors[Math.floor(Math.random() * menuColors.length)];
 };
 
-const Menu = ({ isMenuOpen }) => {
+const Menu = ({ isMenuOpen, setSelectedPage }) => {
   useEffect(() => {
     const rotateColors = () => {
       anime({
@@ -40,14 +40,24 @@ const Menu = ({ isMenuOpen }) => {
     }
   }, [isMenuOpen, hasOpened]);
 
+  const selectPage = (event) => {
+    const pageId = event.target.getAttribute("data-pageid");
+    setSelectedPage(pageId);
+  };
+
   return (
     <div className={`Menu ${isMenuOpen ? "Open" : ""}`}>
       <div className="MenuBackground"></div>
       <img src={profilePic} alt="Isaac drinking coffee" />
-      <MenuButton>About Me</MenuButton>
-      <MenuButton>Projects</MenuButton>
-      <MenuButton>Resume</MenuButton>
-      <MenuButton isChallenge="true">Challenge</MenuButton>
+      <MenuButton onClick={selectPage} pageId="About">
+        About Me
+      </MenuButton>
+      <MenuButton onClick={selectPage} pageId="Projects">
+        Projects
+      </MenuButton>
+      <MenuButton onClick={selectPage} pageId="Challenge">
+        Challenge
+      </MenuButton>
     </div>
   );
 };
