@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 
-import Modal from "../Modals/Modal";
 import Menu from "../Menu/Menu";
 import Burger from "../Burger/Burger";
 import ContactIcons from "../ContactIcons/ContactIcons";
 
-import "./App.css";
-import ModalContainer from "../Modals/ModalContainer";
+import About from "../../pages/About/About";
 
-function App() {
+import "./App.css";
+
+const App = () => {
   const [isMenuOpen, toggleMenuOpen] = useState(false);
 
   return (
@@ -20,17 +20,10 @@ function App() {
         }}
       />
       <Menu isMenuOpen={isMenuOpen} />
+      <About />
       <ContactIcons />
-      <ModalContainer>
-        <Modal isGhost="true">
-          <p>Hello! My name is Isaac Ortega!</p>{" "}
-        </Modal>
-        <Modal isGhost="true" isBackless="true">
-          <p>This is my portfolio!</p>
-        </Modal>
-      </ModalContainer>
     </div>
   );
-}
+};
 
 export default App;
