@@ -4,3 +4,9 @@
   position: absolute;
   z-index: inherit;
 }
+
+@media (max-width: 1000px) {
+  .ContactIcons {
+    display: inline-block;
+  }
+}
