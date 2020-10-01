@@ -55,7 +55,7 @@ const Menu = ({ isMenuOpen, setSelectedPage }) => {
       <MenuButton onClick={selectPage} pageId="Projects">
         Projects
       </MenuButton>
-      <MenuButton onClick={selectPage} pageId="Challenge">
+      <MenuButton onClick={selectPage} pageId="Challenge" isChallenge={true}>
         Challenge
       </MenuButton>
     </div>
