@@ -7,6 +7,7 @@ import ContactIcons from "../ContactIcons/ContactIcons";
 import About from "../../pages/About/About";
 import Projects from "../../pages/Projects/Projects";
 import Challenge from "../../pages/Challenge/Challenge";
+import Relax from "../../pages/Relax/Relax";
 
 import "./App.css";
 
@@ -18,6 +19,7 @@ const App = () => {
     About: <About />,
     Projects: <Projects />,
     Challenge: <Challenge />,
+    Relax: <Relax />,
   };
 
   return (

@@ -58,6 +58,9 @@ const Menu = ({ isMenuOpen, setSelectedPage }) => {
       <MenuButton onClick={selectPage} pageId="Challenge" isChallenge={true}>
         Challenge
       </MenuButton>
+      <MenuButton onClick={selectPage} pageId="Relax">
+        Relax
+      </MenuButton>
     </div>
   );
 };
