@@ -3,7 +3,7 @@ import React from "react";
 import "./Projects.css";
 
 import PageBaseComponent from "../../components/PageBaseComponent/PageBaseComponent";
-import Carousel from "../../components/Carousel/Carousel";
+import { Carousel, Pane } from "../../components/Carousel/Carousel";
 import ModalContainer from "../../components/Modals/ModalContainer";
 import Modal from "../../components/Modals/Modal";
 
@@ -17,13 +17,13 @@ const Projects = () => {
           <p>Here are some of my latest projects:</p>
           <Carousel>
             {projects.map((project) => (
-              <div key={project.name}>
+              <Pane key={project.name}>
                 <img alt={project.imageAlt} src={project.imagePath} />
                 <h1>{project.name}</h1>
                 <section
                   dangerouslySetInnerHTML={{ __html: project.descriptionHTML }}
                 ></section>
-              </div>
+              </Pane>
             ))}
           </Carousel>
         </Modal>
