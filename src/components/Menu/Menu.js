@@ -42,6 +42,12 @@ const Menu = ({ isMenuOpen, setSelectedPage }) => {
 
   const selectPage = (event) => {
     const pageId = event.target.getAttribute("data-pageid");
+    const pageTitle = event.target.getAttribute("data-pagetitle");
+    window.history.pushState(
+      {},
+      pageTitle,
+      `${window.location.protocol}//${window.location.host}/${pageId}`
+    );
     setSelectedPage(pageId);
   };
 
@@ -49,16 +55,29 @@ const Menu = ({ isMenuOpen, setSelectedPage }) => {
     <div className={`Menu ${isMenuOpen ? "Open" : ""}`}>
       <div className="MenuBackground"></div>
       <img src={profilePic} alt="Isaac drinking coffee" />
-      <MenuButton onClick={selectPage} pageId="About">
+      <MenuButton onClick={selectPage} pageTitle="About Isaac" pageId="about">
         About Me
       </MenuButton>
-      <MenuButton onClick={selectPage} pageId="Projects">
+      <MenuButton
+        onClick={selectPage}
+        pageTitle="Isaac's Projects"
+        pageId="projects"
+      >
         Projects
       </MenuButton>
-      <MenuButton onClick={selectPage} pageId="Challenge" isChallenge={true}>
+      <MenuButton
+        onClick={selectPage}
+        pageTitle="Challenge Isaac"
+        pageId="challenge"
+        isChallenge={true}
+      >
         Challenge
       </MenuButton>
-      <MenuButton onClick={selectPage} pageId="Relax">
+      <MenuButton
+        onClick={selectPage}
+        pageTitle="Relax With Isaac"
+        pageId="relax"
+      >
         Relax
       </MenuButton>
     </div>
