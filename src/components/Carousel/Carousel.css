@@ -1,5 +1,39 @@
-.POTATO {
+.Carousel {
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.Carousel > button {
+  position: absolute;
+  margin-top: auto;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border: none;
+}
+
+.Carousel > .LeftArrow {
+  left: 15px;
+  top: calc(50% - 25px);
+}
+
+.Carousel > .RightArrow {
+  right: 15px;
+  top: calc(50% - 25px);
+}
+
+.CarouselTrack {
+  width: auto;
+  height: 100%;
+  transition: transform 2s; /*CHANGE ME TO ANIMATE CAROUSEL*/
+  white-space: nowrap;
+}
+
+.Pane {
+  display: inline-block;
   width: 100%;
   height: 100%;
-  background-color: #fff;
+  vertical-align: top;
 }

@@ -5,21 +5,15 @@ import "./Carousel.css";
 const Carousel = ({ children }) => {
   return (
     <div className="Carousel">
-      <div className="CarouselTrack">
-        <button className="LeftArrow"></button>
-        {children}
-        <button className="RightArrow"></button>
-      </div>
+      <button className="LeftArrow"></button>
+      <div className="CarouselTrack">{children}</div>
+      <button className="RightArrow"></button>
     </div>
   );
 };
 
-const Pane = ({ children, className, key }) => {
-  return (
-    <div className={`Pane ${className}`} key={key}>
-      {children}
-    </div>
-  );
+const Pane = ({ children }) => {
+  return <div className="Pane">{children}</div>;
 };
 
 export { Carousel, Pane };

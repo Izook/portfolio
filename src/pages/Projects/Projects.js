@@ -13,13 +13,13 @@ const Projects = () => {
   return (
     <PageBaseComponent className="Projects">
       <ModalContainer>
-        <Modal isGhost="true" isBackless="true">
+        <Modal isGhost="true">
           <p>Here are some of my latest projects:</p>
           <Carousel>
             {projects.map((project) => (
               <Pane key={project.name}>
-                <img alt={project.imageAlt} src={project.imagePath} />
                 <h1>{project.name}</h1>
+                <img alt={project.imageAlt} src={project.imagePath} />
                 <section
                   dangerouslySetInnerHTML={{ __html: project.descriptionHTML }}
                 ></section>
