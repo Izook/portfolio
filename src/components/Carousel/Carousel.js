@@ -28,7 +28,10 @@ const Carousel = ({ children }) => {
           changeSlide(-1);
         }}
         className="LeftArrow"
-      ></button>
+      >
+        <div className="chevron top"></div>
+        <div className="chevron bottom"></div>
+      </button>
       <div
         className="CarouselTrack"
         style={{ transform: `translateX(${carouselTransltation}%)` }}
@@ -40,7 +43,10 @@ const Carousel = ({ children }) => {
           changeSlide(1);
         }}
         className="RightArrow"
-      ></button>
+      >
+        <div className="chevron top"></div>
+        <div className="chevron bottom"></div>
+      </button>
     </div>
   );
 };

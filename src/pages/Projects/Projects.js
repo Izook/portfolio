@@ -13,8 +13,10 @@ const Projects = () => {
   return (
     <PageBaseComponent className="Projects">
       <ModalContainer>
-        <Modal isGhost="true">
+        <Modal isGhost="true" isBackless="true">
           <p>Here are some of my latest projects:</p>
+        </Modal>
+        <Modal isGhost="true">
           <Carousel>
             {projects.map((project) => (
               <Pane key={project.name}>

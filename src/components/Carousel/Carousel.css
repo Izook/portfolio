@@ -5,14 +5,47 @@
   z-index: 5;
 }
 
+@media screen and (max-width: 512px) {
+  .Carousel {
+    height: 450px;
+  }
+}
+
 .Carousel > button {
   position: absolute;
   margin-top: auto;
-  width: 50px;
-  height: 50px;
-  background-color: #fff;
+  background: none;
   border: none;
+  outline: none;
   z-index: 10;
+}
+
+.Carousel > button > .chevron {
+  background: #fff;
+  height: 15px;
+  width: 50px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.Carousel > button:active {
+  opacity: 0.75;
+}
+
+.Carousel > button.LeftArrow > .chevron.top {
+  transform: rotate(-60deg) translateX(5px) translateY(-10px);
+}
+
+.Carousel > button.LeftArrow > .chevron.bottom {
+  transform: rotate(60deg) translateX(5px) translateY(10px);
+}
+
+.Carousel > button.RightArrow > .chevron.top {
+  transform: rotate(60deg) translateX(-5px) translateY(-10px);
+}
+
+.Carousel > button.RightArrow > .chevron.bottom {
+  transform: rotate(-60deg) translateX(-5px) translateY(10px);
 }
 
 .Carousel > .LeftArrow {
@@ -37,4 +70,7 @@
   width: 100%;
   height: 100%;
   vertical-align: top;
+}
+
+.Pane > h1 {
 }
