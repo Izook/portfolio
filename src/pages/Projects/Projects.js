@@ -20,7 +20,7 @@ const Projects = () => {
           <Carousel>
             {projects.map((project) => (
               <Pane key={project.name}>
-                <h1>{project.name}</h1>
+                <h2>{project.name}</h2>
                 <img alt={project.imageAlt} src={project.imagePath} />
                 <section
                   dangerouslySetInnerHTML={{ __html: project.descriptionHTML }}
