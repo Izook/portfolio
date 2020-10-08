@@ -4,3 +4,8 @@
   text-align: center;
   z-index: 100;
 }
+
+.App.Vanish {
+  transition: opacity 10s;
+  opacity: 0;
+}

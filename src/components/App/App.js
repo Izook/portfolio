@@ -15,6 +15,8 @@ import "./App.css";
 const App = () => {
   const [isMenuOpen, toggleMenuOpen] = useState(false);
   const [selectedPage, setSelectedPage] = useState("about");
+  const [shouldVanish, setShouldVanish] = useState(false);
+  const [mouseMoved, setMouseMoved] = useState(false);
 
   const pages = {
     about: <About />,
@@ -25,21 +27,34 @@ const App = () => {
   };
 
   useEffect(() => {
+    setShouldVanish(false);
     let path = window.location.pathname.slice(1);
     let param = path.split("/")[0].toLowerCase();
     if (param !== "") {
       const validParams = Object.keys(pages).map((page) => page.toLowerCase());
       if (validParams.includes(param)) {
-        const newPage = param;
-        setSelectedPage(newPage);
+        setSelectedPage(param);
+        if (param === "relax") {
+          setShouldVanish(true);
+        }
       } else {
         setSelectedPage("lost");
       }
     }
   }, [pages]);
 
+  const onMouseMove = () => {
+    setMouseMoved(true);
+    setTimeout(() => {
+      setMouseMoved(false);
+    }, 1000);
+  };
+
   return (
-    <div className="App">
+    <div
+      onMouseMove={onMouseMove}
+      className={`App ${shouldVanish && !mouseMoved ? "Vanish" : ""}`}
+    >
       <Burger
         isMenuOpen={isMenuOpen}
         onClick={() => {
