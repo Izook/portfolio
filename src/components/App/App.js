@@ -6,7 +6,7 @@ import ContactIcons from "../ContactIcons/ContactIcons";
 
 import About from "../../pages/About/About";
 import Projects from "../../pages/Projects/Projects";
-import Challenge from "../../pages/Challenge/Challenge";
+// import Challenge from "../../pages/Challenge/Challenge";
 import Relax from "../../pages/Relax/Relax";
 import Lost from "../../pages/Lost/Lost";
 
@@ -21,7 +21,7 @@ const App = () => {
   const pages = {
     about: <About />,
     projects: <Projects />,
-    challenge: <Challenge />,
+    // challenge: <Challenge />,
     relax: <Relax />,
     lost: <Lost />,
   };
@@ -51,7 +51,7 @@ const App = () => {
   };
 
   return (
-    <div
+    <main
       onMouseMove={onMouseMove}
       className={`App ${shouldVanish && !mouseMoved ? "Vanish" : ""}`}
     >
@@ -70,7 +70,7 @@ const App = () => {
       />
       {pages[selectedPage]}
       <ContactIcons />
-    </div>
+    </main>
   );
 };
 

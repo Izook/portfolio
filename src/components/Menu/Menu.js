@@ -52,7 +52,7 @@ const Menu = ({ isMenuOpen, setSelectedPage }) => {
   };
 
   return (
-    <div className={`Menu ${isMenuOpen ? "Open" : ""}`}>
+    <nav className={`Menu ${isMenuOpen ? "Open" : ""}`}>
       <div className="MenuBackground"></div>
       <img src={profilePic} alt="Isaac drinking coffee" />
       <MenuButton onClick={selectPage} pageTitle="About Isaac" pageId="about">
@@ -80,7 +80,7 @@ const Menu = ({ isMenuOpen, setSelectedPage }) => {
       >
         Relax
       </MenuButton>
-    </div>
+    </nav>
   );
 };
 
