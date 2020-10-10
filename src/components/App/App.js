@@ -29,7 +29,7 @@ const App = () => {
   useEffect(() => {
     setShouldVanish(false);
     let path = window.location.pathname.slice(1);
-    let param = path.split("/")[0].toLowerCase();
+    let param = path.split("/")[1].toLowerCase();
     if (param !== "") {
       const validParams = Object.keys(pages).map((page) => page.toLowerCase());
       if (validParams.includes(param)) {

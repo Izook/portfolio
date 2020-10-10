@@ -46,7 +46,7 @@ const Menu = ({ isMenuOpen, setSelectedPage }) => {
     window.history.pushState(
       {},
       pageTitle,
-      `${window.location.protocol}//${window.location.host}/${pageId}`
+      `${window.location.protocol}//${window.location.host}/portfolio/${pageId}`
     );
     setSelectedPage(pageId);
   };
