@@ -16,7 +16,7 @@ const App = () => {
   const [isMenuOpen, toggleMenuOpen] = useState(false);
   const [selectedPage, setSelectedPage] = useState("about");
   const [shouldVanish, setShouldVanish] = useState(false);
-  const [mouseMoved, setMouseMoved] = useState(false);
+  const [userActive, setUserActive] = useState(false);
 
   const pages = {
     about: <About />,
@@ -43,17 +43,20 @@ const App = () => {
     }
   }, [pages]);
 
-  const onMouseMove = () => {
-    setMouseMoved(true);
+  const onUserActivity = () => {
+    setUserActive(true);
     setTimeout(() => {
-      setMouseMoved(false);
+      setUserActive(false);
     }, 1000);
   };
 
   return (
     <main
-      onMouseMove={onMouseMove}
-      className={`App ${shouldVanish && !mouseMoved ? "Vanish" : ""}`}
+      onMouseMove={onUserActivity}
+      onMouseDown={onUserActivity}
+      className={`App ${
+        shouldVanish && !userActive && !isMenuOpen ? "Vanish" : ""
+      }`}
     >
       <Burger
         isMenuOpen={isMenuOpen}
