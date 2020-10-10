@@ -2,6 +2,7 @@
   "name": "project-lavender",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://izook.github.io/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -47,6 +48,7 @@
   "devDependencies": {
     "husky": "^4.3.0",
     "lint-staged": "^10.3.0",
-    "prettier": "^2.1.1"
+    "prettier": "^2.1.1",
+    "serve": "^11.3.2"
   }
 }
