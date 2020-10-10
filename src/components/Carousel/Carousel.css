@@ -61,16 +61,16 @@
   }
 }
 .CarouselTrack {
-  width: auto;
+  display: flex;
   height: 100%;
-  transition: transform 2s; /*CHANGE ME TO ANIMATE CAROUSEL*/
+  transition: transform 2s;
   white-space: nowrap;
+  align-items: stretch;
 }
 
 .Pane {
   display: inline-flex;
   width: 100%;
-  height: 100%;
   vertical-align: top;
   flex-direction: column;
   justify-content: center;

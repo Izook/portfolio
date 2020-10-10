@@ -27,6 +27,14 @@
   height: auto;
 }
 
+.Modal a {
+  color: #61f5ee;
+}
+
+.Modal a:visited {
+  color: #f576f5;
+}
+
 @media screen and (max-width: 512px) {
   .Modal > p {
     font-size: 0.75em;

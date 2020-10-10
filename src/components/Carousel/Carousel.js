@@ -9,15 +9,12 @@ const Carousel = ({ children }) => {
 
   const slideCount = children.length;
   const changeSlide = (slideDiff) => {
-    console.log("Prev Slide: " + currentSlide);
     currentSlide += slideDiff;
-    console.log("New Slide: " + currentSlide);
     // mod(currentSlide, slideCount) operation
     currentSlide =
       currentSlide - slideCount * Math.floor(currentSlide / slideCount);
-    console.log("Mod Slide: " + currentSlide);
 
-    const newTranslation = -currentSlide * 100;
+    const newTranslation = -currentSlide * (100 / slideCount);
     setCarouselTranslation(newTranslation);
   };
 
@@ -34,7 +31,10 @@ const Carousel = ({ children }) => {
       </button>
       <div
         className="CarouselTrack"
-        style={{ transform: `translateX(${carouselTransltation}%)` }}
+        style={{
+          transform: `translateX(${carouselTransltation}%)`,
+          width: `${slideCount * 100}%`,
+        }}
       >
         {children}
       </div>
