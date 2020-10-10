@@ -1,7 +1,5 @@
 import React from "react";
 
-import "./Projects.css";
-
 import PageBaseComponent from "../../components/PageBaseComponent/PageBaseComponent";
 import { Carousel, Pane } from "../../components/Carousel/Carousel";
 import ModalContainer from "../../components/Modals/ModalContainer";

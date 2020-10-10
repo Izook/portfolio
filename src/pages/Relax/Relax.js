@@ -1,7 +1,5 @@
 import React from "react";
 
-import "./Relax.css";
-
 import PageBaseComponent from "../../components/PageBaseComponent/PageBaseComponent";
 import ModalContainer from "../../components/Modals/ModalContainer";
 import Modal from "../../components/Modals/Modal";
