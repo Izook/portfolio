@@ -19,7 +19,7 @@
       "purpose": "maskable"
     }
   ],
-  "start_url": ".",
+  "start_url": "./portfolio",
   "display": "standalone",
   "theme_color": "#3EA0AD",
   "background_color": "#000b2e"
