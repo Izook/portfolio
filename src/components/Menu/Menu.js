@@ -72,6 +72,13 @@ const Menu = ({ isMenuOpen, setSelectedPage }) => {
       >
         Relax
       </MenuButton>
+      <MenuButton
+        onClick={selectPage}
+        pageTitle="Privacy Policy"
+        pageId="privacy"
+      >
+        Privacy
+      </MenuButton>
     </nav>
   );
 };

@@ -22,6 +22,37 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <link rel="canonical" href="https://izook.github.io/portfolio/" />
+
+    <!--Google Analytics Tag -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-162642839-1"
+    ></script>
+
+    <!-- Enable Google Analytics -->
+    <script>
+      function setUpGoogleAnalytics() {
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+        gtag("config", "UA-162642839-1", {});
+      }
+
+      function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+      }
+
+      // Check if user isn't opted out
+      const optOutCookie = getCookie('IZOOK_OPT_OUT');
+      if (optOutCookie != "true") {
+        console.log("SET UP GOOGDS");
+        setUpGoogleAnalytics();
+      }
+    </script>
     <title>Isaac's Portfolio</title>
   </head>
   <body>

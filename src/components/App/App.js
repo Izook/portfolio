@@ -9,6 +9,7 @@ import Projects from "../../pages/Projects/Projects";
 // import Challenge from "../../pages/Challenge/Challenge";
 import Relax from "../../pages/Relax/Relax";
 import Lost from "../../pages/Lost/Lost";
+import Privacy from "../../pages/Privacy/Privacy";
 
 import "./App.css";
 
@@ -24,6 +25,7 @@ const App = () => {
     // challenge: <Challenge />,
     relax: <Relax />,
     lost: <Lost />,
+    privacy: <Privacy />
   };
 
   useEffect(() => {

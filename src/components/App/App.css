@@ -3,6 +3,7 @@
   height: 100%;
   text-align: center;
   z-index: 100;
+  overflow: hidden;
 }
 
 .App.Vanish {
