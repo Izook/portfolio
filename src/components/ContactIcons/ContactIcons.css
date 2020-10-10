@@ -1,0 +1,13 @@
+.ContactIcons {
+  right: 10px;
+  bottom: 10px;
+  position: absolute;
+  z-index: inherit;
+}
+
+@media screen and (max-width: 512px) {
+  .ContactIcons {
+    right: 5px;
+    bottom: 0px;
+  }
+}

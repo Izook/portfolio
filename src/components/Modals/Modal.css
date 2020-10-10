@@ -1,0 +1,52 @@
+.Modal {
+  max-width: 900px;
+  max-height: 100%;
+  font-size: 24px;
+  opacity: 0;
+  text-align: center;
+  color: #ffffff;
+  padding: 10px;
+  margin: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  z-index: 15;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 1024px) {
+  .Modal {
+    max-width: 100%;
+    margin: 0px;
+  }
+}
+
+.Modal > p {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: auto;
+}
+
+.Modal a {
+  color: #61f5ee;
+}
+
+.Modal a:visited {
+  color: #f576f5;
+}
+
+@media screen and (max-width: 512px) {
+  .Modal > p {
+    font-size: 0.75em;
+  }
+}
+
+.Modal.Backless {
+  background: rgba(255, 255, 255, 0);
+  border-radius: 15px;
+}
+
+.Modal.Ghost {
+  opacity: 0;
+  transform: translateX(-20px);
+}

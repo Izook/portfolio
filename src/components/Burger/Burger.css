@@ -1,0 +1,30 @@
+.Burger {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+  z-index: 200;
+}
+
+.Burger > div {
+  width: 40px;
+  height: 5px;
+  border-radius: 5px;
+  background-color: #fff;
+  margin: 6px 0px;
+  transition: transform 0.5s;
+}
+
+.Burger.Open > .Top {
+  transform: rotate(45deg) translateX(8px) translateY(8px);
+}
+
+.Burger.Open > .Bottom {
+  transform: rotate(-45deg) translateX(7px) translateY(-7px);
+}
+
+.Burger.Open > .Middle {
+  transform: scaleX(0) scaleY(0) translateX(-200%);
+}

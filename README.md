@@ -1,2 +1,7 @@
 # izook.github.io
-My GitHub page. Currently just redirects to Knotris. 
+
+This is my portfolio page!
+
+I made this with [Create React App](https://github.com/facebook/create-react-app).
+
+This was fun to make!
