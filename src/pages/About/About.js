@@ -4,8 +4,6 @@ import PageBaseComponent from "../../components/PageBaseComponent/PageBaseCompon
 import ModalContainer from "../../components/Modals/ModalContainer";
 import Modal from "../../components/Modals/Modal";
 
-import "./About.css";
-
 const About = () => {
   return (
     <PageBaseComponent className="About">
