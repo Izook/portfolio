@@ -7,7 +7,6 @@ const MenuButton = ({
   children,
   className,
   pageId,
-  pageTitle,
   onClick,
   isChallenge,
 }) => {
@@ -20,7 +19,6 @@ const MenuButton = ({
       <div className="Square Left" style={isChallengeStyles}></div>
       <button
         data-pageid={pageId}
-        data-pagetitle={pageTitle}
         onClick={onClick}
         className={className}
       >

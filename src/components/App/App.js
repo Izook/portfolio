@@ -30,14 +30,15 @@ const App = () => {
 
   useEffect(() => {
     setShouldVanish(false);
-    let path = window.location.pathname.slice(1);
-    let param = path.split("/")[1].toLowerCase();
-    if (param !== "") {
-      const validParams = Object.keys(pages).map((page) => page.toLowerCase());
-      if (validParams.includes(param)) {
-        setSelectedPage(param);
-        if (param === "relax") {
-          setShouldVanish(true);
+    const path = window.location.hash.slice(1);
+    if (path !== "") {
+      const validPaths = Object.keys(pages).map((page) => page.toLowerCase());
+      if (validPaths.includes(path)) {
+        setSelectedPage(path);
+        if (path === "relax") {
+          setTimeout(() => {
+            setShouldVanish(true);
+          }, 1500);
         }
       } else {
         setSelectedPage("lost");

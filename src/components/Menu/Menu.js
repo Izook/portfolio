@@ -42,12 +42,7 @@ const Menu = ({ isMenuOpen, setSelectedPage }) => {
 
   const selectPage = (event) => {
     const pageId = event.target.getAttribute("data-pageid");
-    const pageTitle = event.target.getAttribute("data-pagetitle");
-    window.history.pushState(
-      {},
-      pageTitle,
-      `${window.location.protocol}//${window.location.host}/portfolio/${pageId}`
-    );
+    window.location.hash = pageId;
     setSelectedPage(pageId);
   };
 
@@ -60,21 +55,18 @@ const Menu = ({ isMenuOpen, setSelectedPage }) => {
       </MenuButton>
       <MenuButton
         onClick={selectPage}
-        pageTitle="Isaac's Projects"
         pageId="projects"
       >
         Projects
       </MenuButton>
       <MenuButton
         onClick={selectPage}
-        pageTitle="Relax With Isaac"
         pageId="relax"
       >
         Relax
       </MenuButton>
       <MenuButton
         onClick={selectPage}
-        pageTitle="Privacy Policy"
         pageId="privacy"
       >
         Privacy
