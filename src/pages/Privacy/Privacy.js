@@ -12,7 +12,6 @@ const Privacy = () => {
   const [showCookieBanner, setShowCookieBanner] = useState(false);
 
   const optOut = () => {
-    console.log("WOO");
     window['ga-disable-UA-162642839-1'] = true;
     setShowCookieBanner(true);
     document.cookie = "IZOOK_OPT_OUT=true";
