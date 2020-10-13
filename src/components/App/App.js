@@ -13,6 +13,8 @@ import Privacy from "../../pages/Privacy/Privacy";
 
 import "./App.css";
 
+let timer = -1;
+
 const App = () => {
   const [isMenuOpen, toggleMenuOpen] = useState(false);
   const [selectedPage, setSelectedPage] = useState("about");
@@ -25,20 +27,24 @@ const App = () => {
     // challenge: <Challenge />,
     relax: <Relax />,
     lost: <Lost />,
-    privacy: <Privacy />
+    privacy: <Privacy />,
   };
 
   useEffect(() => {
-    setShouldVanish(false);
     const path = window.location.hash.slice(1);
     if (path !== "") {
       const validPaths = Object.keys(pages).map((page) => page.toLowerCase());
       if (validPaths.includes(path)) {
         setSelectedPage(path);
         if (path === "relax") {
-          setTimeout(() => {
-            setShouldVanish(true);
-          }, 1500);
+          if (timer === -1) {
+            timer = setTimeout(() => {
+              setShouldVanish(true);
+              timer = -1;
+            }, 3000);
+          }
+        } else {
+          setShouldVanish(false);
         }
       } else {
         setSelectedPage("lost");
