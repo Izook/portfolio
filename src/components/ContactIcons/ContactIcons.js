@@ -3,14 +3,24 @@ import ContactIcon from "./ContactIcon";
 
 import "./ContactIcons.css";
 
-import phoneIcon from "../../assets/phone.png";
 import githubIcon from "../../assets/github.png";
 import linkedinIcon from "../../assets/linkedin.png";
-import emailIcon from "../../assets/email.png";
+import itchIcon from "../../assets/itchio.png";
+import twitterIcon from "../../assets/twitter.png";
 
 const ContactIcons = () => {
   return (
     <div className="ContactIcons">
+      <ContactIcon
+        icon={twitterIcon}
+        url="https://twitter.com/izookojay"
+        altText="Link to my twitter page"
+      />
+      <ContactIcon
+        icon={itchIcon}
+        url="https://izook.itch.io/"
+        altText="Link to itch io page"
+      />
       <ContactIcon
         icon={githubIcon}
         url="//github.com/Izook"
@@ -20,16 +30,6 @@ const ContactIcons = () => {
         icon={linkedinIcon}
         url="//www.linkedin.com/in/isaac-ortega/"
         altText="Link to my LinkedIn page"
-      />
-      <ContactIcon
-        icon={emailIcon}
-        url="mailto:isaac.io.ortega@gmail.com?subject=Hello!"
-        altText="Link to send me an email"
-      />
-      <ContactIcon
-        icon={phoneIcon}
-        url="tel:8587746244"
-        altText="Link to call me"
       />
     </div>
   );
