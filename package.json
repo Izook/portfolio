@@ -1,6 +1,6 @@
 {
-  "name": "project-lavender",
-  "version": "0.1.0",
+  "name": "portfolio",
+  "version": "0.0.0",
   "private": true,
   "homepage": "https://izook.github.io/portfolio/",
   "dependencies": {
