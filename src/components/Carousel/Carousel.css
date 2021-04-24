@@ -1,6 +1,8 @@
 .Carousel {
   width: 100%;
-  overflow: hidden;
+  max-height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
   z-index: 5;
 }
 
@@ -53,11 +55,32 @@
 
 @media screen and (max-width: 512px) {
   .Carousel > .LeftArrow {
-    left: -55px;
+    left: -35px;
   }
 
   .Carousel > .RightArrow {
-    right: -55px;
+    right: -35px;
+  }
+
+  .Carousel > button > .chevron {
+    height: 5px;
+    width: 15px;
+  }
+
+  .Carousel > button.LeftArrow > .chevron.top {
+    transform: rotate(-60deg) translateX(5px) translateY(3px);
+  }
+
+  .Carousel > button.LeftArrow > .chevron.bottom {
+    transform: rotate(60deg) translateX(5px) translateY(-3px);
+  }
+
+  .Carousel > button.RightArrow > .chevron.top {
+    transform: rotate(60deg) translateX(-5px) translateY(3px);
+  }
+
+  .Carousel > button.RightArrow > .chevron.bottom {
+    transform: rotate(-60deg) translateX(-5px) translateY(-3px);
   }
 }
 .CarouselTrack {
